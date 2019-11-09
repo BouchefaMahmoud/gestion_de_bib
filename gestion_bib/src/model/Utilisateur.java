@@ -1,5 +1,7 @@
-class Utilisateur {
-    private int id_user;
+package model;
+
+public class Utilisateur {
+
     private String nom;
     private String prenom;
     private String adresse;
@@ -14,19 +16,18 @@ class Utilisateur {
     }
 
 
-    public Utilisateur(int id_user,String nom, String prenom,String adresse,String tel,String email,String mdp,char type) {
-        this.id_user = id_user;
+    public Utilisateur(String nom, String prenom,String adresse,String tel,String email,String mdp,char type) {
+        
         this.nom = nom;
         this.prenom = prenom;
         this.adresse = adresse;
         this.tel = tel;
         this.email = email;
         this.type = type;
+        this.mdp = mdp;
     }
     // geters
-    public int getId_user(){
-        return this.id_user; 
-    }
+
     
     public String getNom(){
         return this.nom; 
@@ -53,9 +54,15 @@ class Utilisateur {
     }
 
     // seters
-    public void setId_user(int id_user){
-        this.id_user = id_user;
+
+    public String getMdp() {
+        return mdp;
     }
+
+    public void setMdp(String mdp) {
+        this.mdp = mdp;
+    }
+
 
     public void setNom(String nom){
         this.nom = nom;
